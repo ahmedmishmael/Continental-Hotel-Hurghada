@@ -13,6 +13,7 @@ const Offers = () => {
           <a
             href="https://www.book-secure.com/index.php?s=results&amp;property=eghur28217"
             target="_blank"
+            rel="noreferrer"
           >
             <Image
               src={OffersBanner}

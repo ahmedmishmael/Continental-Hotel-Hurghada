@@ -1,16 +1,7 @@
-import Head from "next/head";
-import { Fragment } from "react";
-import usePageGenerator from "../src/hooks/usePageGenerator";
+import Meetings from "../src/components/Meetings";
 
 export default function meetingsandevents({ data }) {
-  return (
-    <Fragment>
-      <Head>
-        <title>Meetings & Events</title>
-      </Head>
-      <section>{usePageGenerator(data)}</section>
-    </Fragment>
-  );
+  return <Meetings data={data} />;
 }
 
 export async function getStaticProps() {

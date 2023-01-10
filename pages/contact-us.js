@@ -66,7 +66,13 @@ export default function contactus() {
               <p>Fax : +20 65-346-5101</p>
               <p>EMAIL : reservation@continental-hurghada.com</p>
               {socialMedia.map((e) => (
-                <a key={e.id} href={e.link} target="_blank" className="me-2">
+                <a
+                  key={e.id}
+                  href={e.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="me-2"
+                >
                   {e.content}
                 </a>
               ))}

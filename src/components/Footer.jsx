@@ -61,7 +61,13 @@ const Footer = () => {
             <p>FOLLOW CONTINENTAL HOTEL HURGHADA</p>
             <div>
               {contactInfo.map((e) => (
-                <a key={e.id} href={e.link} target="_blank" className="me-3">
+                <a
+                  key={e.id}
+                  href={e.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="me-3"
+                >
                   {e.content}
                 </a>
               ))}
@@ -119,17 +125,24 @@ const Footer = () => {
           <a
             className="me-lg-3"
             target="_blank"
+            rel="noreferrer"
             href="https://goo.gl/maps/dWndz4MYUGMJULj4A"
           >
             <FaTelegramPlane />
             El Fareek Yousef Affify St PO Box 36 Hurghada, Egypt 84511
           </a>
-          <a className="me-lg-3" target="_blank" href="tel:+20653465100">
+          <a
+            className="me-lg-3"
+            target="_blank"
+            rel="noreferrer"
+            href="tel:+20653465100"
+          >
             <MdCall />
             +20 65-346-5100
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href="mailto: reservation@continental-hurghada.com"
           >
             <HiLocationMarker />

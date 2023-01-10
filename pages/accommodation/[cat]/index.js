@@ -74,6 +74,7 @@ export default function categories({ unit }) {
               <a
                 href="https://www.book-secure.com/index.php?s=results&property=eghur28217"
                 target="_blank"
+                rel="noreferrer"
               >
                 <button type="button">BOOK NOW</button>
               </a>

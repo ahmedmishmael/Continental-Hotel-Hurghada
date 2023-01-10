@@ -1,16 +1,7 @@
-import Head from "next/head";
-import { Fragment } from "react";
-import usePageGenerator from "../src/hooks/usePageGenerator";
+import HealthClub from "../src/components/HealthClub";
 
 export default function healthclub({ data }) {
-  return (
-    <Fragment>
-      <Head>
-        <title>Health Club</title>
-      </Head>
-      <section>{usePageGenerator(data)}</section>
-    </Fragment>
-  );
+  return <HealthClub data={data} />;
 }
 export async function getStaticProps() {
   const res = await import("./data/data.json");

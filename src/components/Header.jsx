@@ -76,7 +76,13 @@ const Header = () => {
         <div id="topbar">
           <div>
             {contactInfo.map((e) => (
-              <a key={e.id} href={e.link} target="_blank" className="me-3">
+              <a
+                key={e.id}
+                href={e.link}
+                target="_blank"
+                rel="noreferrer"
+                className="me-3"
+              >
                 {e.content}
               </a>
             ))}

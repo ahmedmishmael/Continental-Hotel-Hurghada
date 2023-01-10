@@ -1,16 +1,7 @@
-import Head from "next/head";
-import { Fragment } from "react";
-import usePageGenerator from "../src/hooks/usePageGenerator";
+import Restaurants from "../src/components/Restaurants";
 
 export default function restaurantsandbars({ data }) {
-  return (
-    <Fragment>
-      <Head>
-        <title>Restaurants & Bars</title>
-      </Head>
-      <section>{usePageGenerator(data)}</section>
-    </Fragment>
-  );
+  return <Restaurants data={data} />;
 }
 export async function getStaticProps() {
   const res = await import("./data/data.json");

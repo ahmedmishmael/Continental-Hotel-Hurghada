@@ -1,16 +1,7 @@
-import Head from "next/head";
-import { Fragment } from "react";
-import usePageGenerator from "../src/hooks/usePageGenerator";
+import Activities from "../src/components/Activities";
 
 export default function activities({ data }) {
-  return (
-    <Fragment>
-      <Head>
-        <title>Activities</title>
-      </Head>
-      <section>{usePageGenerator(data)}</section>
-    </Fragment>
-  );
+  return <Activities data={data} />;
 }
 
 export async function getStaticProps() {

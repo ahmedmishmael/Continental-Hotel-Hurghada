@@ -1,16 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import useCarousel from "./useCarousel";
 import styles from "../../styles/PageGenerator.module.css";
+import useCarousel from "./useCarousel";
 
 const usePageGenerator = (data) => {
-  return data.map((e) =>
-    e.sn % 2 !== 0 ? (
-      <Container key={e.id} className={`${styles.container} my-5`}>
-        <Row>
-          <Col lg={6} className="p-0">
-            {useCarousel(e.images)}
-          </Col>
+  return data.map((e) => (
+    <Container key={e.id} className={`${styles.container} my-5`}>
+      <Row>
+        {e.sn % 2 !== 0 ? (
           <Col lg={6} className={styles.content}>
             <h2>{e.title}</h2>
             <p>{e.description}</p>
@@ -20,11 +17,11 @@ const usePageGenerator = (data) => {
             <p>{e.text5}</p>
             <p>{e.text6}</p>
           </Col>
-        </Row>
-      </Container>
-    ) : (
-      <Container key={e.id} className={`${styles.container} my-5`}>
-        <Row>
+        ) : null}
+        <Col lg={6} className="p-0">
+          {useCarousel(e.images)}
+        </Col>
+        {e.sn % 2 === 0 ? (
           <Col lg={6} className={styles.content}>
             <h2>{e.title}</h2>
             <p>{e.description}</p>
@@ -34,13 +31,10 @@ const usePageGenerator = (data) => {
             <p>{e.text5}</p>
             <p>{e.text6}</p>
           </Col>
-          <Col lg={6} className="p-0">
-            {useCarousel(e.images)}
-          </Col>
-        </Row>
-      </Container>
-    )
-  );
+        ) : null}
+      </Row>
+    </Container>
+  ));
 };
 
 export default usePageGenerator;
