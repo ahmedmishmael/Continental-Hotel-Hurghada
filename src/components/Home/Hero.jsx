@@ -26,19 +26,27 @@ const Hero = () => {
             <Container>
               <form>
                 <Row>
-                  <Col lg={4}>
+                  <Col lg={4} sm={12}>
                     <Row>
                       <Col className="d-flex flex-column">
                         <label htmlFor="checkin">CHECK IN</label>
-                        <input id="checkin" type="date" />
+                        <input
+                          id="checkin"
+                          type="date"
+                          style={{ width: "100%" }}
+                        />
                       </Col>
                       <Col className="d-flex flex-column">
                         <label htmlFor="checkout">CHECK OUT</label>
-                        <input id="checkin" type="date" />
+                        <input
+                          id="checkin"
+                          type="date"
+                          style={{ width: "100%" }}
+                        />
                       </Col>
                     </Row>
                   </Col>
-                  <Col lg={4}>
+                  <Col lg={4} sm={12}>
                     <Row>
                       <Col className="d-flex flex-column">
                         <label htmlFor="adults">ADULTS</label>
@@ -63,7 +71,7 @@ const Hero = () => {
                       </Col>
                     </Row>
                   </Col>
-                  <Col lg={4}>
+                  <Col lg={4} sm={12}>
                     <Row>
                       <Col className="d-flex flex-column">
                         <label htmlFor="checkin">PROMO CODE</label>
