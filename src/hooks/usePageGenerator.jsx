@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "../../styles/PageGenerator.module.css";
-import useCarousel from "./useCarousel";
+import Carousel from "../components/Carousel";
 
 const usePageGenerator = (data) => {
   return data.map((e) => (
@@ -19,7 +19,7 @@ const usePageGenerator = (data) => {
           </Col>
         ) : null}
         <Col lg={6} className="p-0">
-          {useCarousel(e.images)}
+          <Carousel images={e.images} />
         </Col>
         {e.sn % 2 === 0 ? (
           <Col lg={6} className={styles.content}>
